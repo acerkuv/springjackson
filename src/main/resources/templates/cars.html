@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>All cars</title>
+</head>
+<body>
+<!--Вставка фрагмента-->
+<div th:replace="/fragments/header"></div>
+
+
+ <div class="conrainer">
+     <table>
+         <th:block th:each="car: ${allCars}">
+             <tr>
+                 <td th:text="${car.id}">...</td>
+                 <td th:text="${car.brand}">...</td>
+                 <td th:text="${car.typeEngine}">...</td>
+             </tr>
+
+         </th:block>
+     </table>
+
+ </div>
+</body>
+</html>
